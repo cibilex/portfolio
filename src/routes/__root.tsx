@@ -46,7 +46,6 @@ export const Route = createRootRouteWithContext<MyRouterContext>()({
 function RenderApp({ children }: { children: React.ReactNode }) {
   return <ThemeProvider>{children}</ThemeProvider>
 }
-console.log('test')
 
 function RootDocument({ children }: { children: React.ReactNode }) {
   return (
