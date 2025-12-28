@@ -12,7 +12,6 @@ import appCss from '../assets/css/index.css?url'
 
 import type { QueryClient } from '@tanstack/react-query'
 import { ThemeProvider } from '@/providers/theme.provider'
-import { Button } from '@/components/ui/button'
 
 interface MyRouterContext {
   queryClient: QueryClient
