@@ -6,6 +6,7 @@ import React, {
   useRef,
   useState,
 } from 'react'
+import { Meteors } from './Meteors'
 import { cn } from '@/lib/utils'
 
 const MouseEnterContext = createContext<
@@ -46,10 +47,7 @@ export const CardContainer = ({
   return (
     <MouseEnterContext.Provider value={[isMouseEntered, setIsMouseEntered]}>
       <div
-        className={cn(
-          'py-20 flex items-center justify-center',
-          containerClassName,
-        )}
+        className={cn('flex items-center justify-center', containerClassName)}
         style={{
           perspective: '1000px',
         }}
@@ -60,12 +58,9 @@ export const CardContainer = ({
           onMouseMove={handleMouseMove}
           onMouseLeave={handleMouseLeave}
           className={cn(
-            'flex items-center justify-center relative transition-all duration-200 ease-linear',
+            'flex flex-col  p-6  rounded-xl   group z-50 justify-center relative transition-all duration-200 ease-linear transform-3d **:transform-3d',
             className,
           )}
-          style={{
-            transformStyle: 'preserve-3d',
-          }}
         >
           {children}
         </div>
@@ -74,25 +69,28 @@ export const CardContainer = ({
   )
 }
 
-export const CardBody = ({
-  children,
+export const CardBackground = ({
   className,
+  meteorsNumber = 5,
+  showMeteors = true,
 }: {
-  children: React.ReactNode
   className?: string
+  meteorsNumber?: number
+  showMeteors?: boolean
 }) => {
   return (
-    <div
+    <CardItem
+      translateZ={0}
       className={cn(
-        'h-auto w-auto [transform-style:preserve-3d] [&_*]:[transform-style:preserve-3d]',
+        'absolute inset-0 w-full h-full overflow-hidden rounded-2xl bg-card/95 backdrop-blur-md',
         className,
       )}
     >
-      {children}
-    </div>
+      {showMeteors && <Meteors number={meteorsNumber} />}
+      <div className="pointer-events-none absolute inset-0 rounded-2xl bg-linear-to-br from-blue-500/10 via-transparent to-purple-500/10" />
+    </CardItem>
   )
 }
-
 export const CardItem = ({
   as: Tag = 'div',
   children,
@@ -154,7 +152,7 @@ export const CardItem = ({
     <Tag
       ref={ref}
       className={cn(
-        'w-fit transition-transform duration-200 ease-linear [transform-style:preserve-3d] [will-change:transform]',
+        'transition-transform duration-200 ease-linear transform-3d d [will-change:transform]',
         className,
       )}
       {...rest}

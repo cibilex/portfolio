@@ -12,6 +12,7 @@ import appCss from '../assets/css/index.css?url'
 
 import type { QueryClient } from '@tanstack/react-query'
 import { ThemeProvider } from '@/providers/theme.provider'
+import { ThemeToggle } from '@/components/ui/ThemeToggle'
 
 interface MyRouterContext {
   queryClient: QueryClient
@@ -43,7 +44,17 @@ export const Route = createRootRouteWithContext<MyRouterContext>()({
 })
 
 function RenderApp({ children }: { children: React.ReactNode }) {
-  return <ThemeProvider>{children}</ThemeProvider>
+  return (
+    <ThemeProvider>
+      <div className="z-50  h-screen w-full flex gap-16  container mx-auto">
+        <ThemeToggle />
+        <div className="w-64 bg-green-300">s</div>
+        <div className="grow flex relative justify-center items-center">
+          {children}
+        </div>
+      </div>
+    </ThemeProvider>
+  )
 }
 
 function RootDocument({ children }: { children: React.ReactNode }) {
