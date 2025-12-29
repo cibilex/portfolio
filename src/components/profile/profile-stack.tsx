@@ -1,12 +1,44 @@
 import { motion } from 'framer-motion'
 import { Award } from 'lucide-react'
-import { InfiniteMovingCards } from './ui/infinite-moving-cards'
-import { Badge } from './ui/badge'
-import Subtitle from './ui/subtitle'
+import { CardBackground, CardContainer, CardItem } from '../ui/3d-card'
+import BlurBg from '../blur-bg'
+import HoverBorder from '../hover-border'
+import Subtitle from '../ui/subtitle'
+import { InfiniteMovingCards } from '../ui/infinite-moving-cards'
+import { Badge } from '../ui/badge'
 import type { Variants } from 'motion/react'
 import { technologies } from '@/constants/tech.constants'
 
-export const TechStack = () => {
+const techStackVariants: Variants = {
+  initial: {
+    opacity: 0,
+    y: -100,
+  },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.3,
+      ease: 'easeOut',
+    },
+  },
+}
+
+function ProfileStack() {
+  return (
+    <CardContainer className="w-xl rotate-y-0">
+      <BlurBg />
+      <HoverBorder />
+      <CardBackground showMeteors={false} />
+
+      <CardItem translateZ={35} className="w-full">
+        <TechStackContent />
+      </CardItem>
+    </CardContainer>
+  )
+}
+
+function TechStackContent() {
   return (
     <div className="space-y-2 overflow-hidden">
       <motion.div
@@ -46,3 +78,5 @@ export const TechStack = () => {
     </div>
   )
 }
+
+export default ProfileStack

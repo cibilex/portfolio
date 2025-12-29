@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { ProfileCard } from './ProfileCard'
+import Profile from './profile'
 import type { Variants } from 'framer-motion'
 import { GridBackground } from '@/components/ui/GridBackground'
 
@@ -16,9 +16,8 @@ const cardVariants: Variants = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.2,
+      duration: 0.3,
       ease: 'easeOut',
-      when: 'beforeChildren',
     },
   },
 }
@@ -27,7 +26,7 @@ export const HeroSection = () => {
     <GridBackground>
       {/* Main Content */}
       <motion.div variants={cardVariants} initial="initial" animate="animate">
-        <ProfileCard />
+        <Profile />
       </motion.div>
     </GridBackground>
   )

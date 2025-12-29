@@ -1,29 +1,22 @@
 import { motion } from 'framer-motion'
-import { MapPin } from 'lucide-react'
-import { SocialLinks } from './SocialLinks'
-import { TechStack } from './TechStack'
-import BlurBg from './blur-bg'
-import HoverBorder from './hover-border'
-import { Button } from './ui/button'
-import type { Variants } from 'framer-motion'
+
+import BlurBg from '../blur-bg'
+import HoverBorder from '../hover-border'
+import { Button } from '../ui/button'
+import ProfileHeader from './profile-header'
+import ProfileStack from './profile-stack'
 import {
   CardBackground,
   CardContainer,
   CardItem,
 } from '@/components/ui/3d-card'
 
-export const ProfileCard = () => {
+function Profile() {
   return (
     <div className="flex flex-col gap-20 pt-12">
-      <CardContainer className="w-xl rotate-y-0">
-        <BlurBg />
-        <HoverBorder />
-        <CardBackground showMeteors={false} />
+      <ProfileHeader />
+      <ProfileStack />
 
-        <CardItem translateZ={35} className="w-full">
-          <TechStack />
-        </CardItem>
-      </CardContainer>
       <CardContainer className="w-xl rotate-y-">
         <BlurBg className="blur-xl" />
         <HoverBorder />
@@ -57,3 +50,5 @@ export const ProfileCard = () => {
     </div>
   )
 }
+
+export default Profile

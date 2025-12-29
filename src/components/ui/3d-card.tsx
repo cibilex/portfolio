@@ -41,7 +41,9 @@ export const CardContainer = ({
   const handleMouseLeave = () => {
     if (!containerRef.current) return
     setIsMouseEntered(false)
-    containerRef.current.style.transform = `rotateY(0deg) rotateX(0deg)`
+    containerRef.current.style.transform = className
+      ? className
+      : `rotateY(0deg) rotateX(0deg)`
   }
 
   return (
@@ -58,7 +60,7 @@ export const CardContainer = ({
           onMouseMove={handleMouseMove}
           onMouseLeave={handleMouseLeave}
           className={cn(
-            'flex flex-col  p-6  rounded-xl   group z-50 justify-center relative transition-all duration-200 ease-linear transform-3d **:transform-3d',
+            'flex flex-col  p-6  rounded-xl    group z-50 justify-center relative transition-all duration-200 ease-linear transform-3d **:transform-3d',
             className,
           )}
         >
