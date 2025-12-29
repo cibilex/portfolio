@@ -16,8 +16,9 @@ const cardVariants: Variants = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.6,
+      duration: 0.2,
       ease: 'easeOut',
+      when: 'beforeChildren',
     },
   },
 }
