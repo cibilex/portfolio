@@ -14,6 +14,7 @@ import NuxtIcon from '@/components/icons/nuxt'
 import AwsIcon from '@/components/icons/aws'
 import DockerIcon from '@/components/icons/docker'
 import GraphqlIcon from '@/components/icons/graphql'
+import TailwindIcon from '@/components/icons/tailwind'
 
 export const technologies: Array<{
   icon: React.ComponentType
@@ -21,6 +22,12 @@ export const technologies: Array<{
   color: string
   target: string
 }> = [
+  {
+    icon: TailwindIcon,
+    name: 'Tailwind',
+    color: '#38bdf8',
+    target: 'https://tailwindcss.com',
+  },
   {
     icon: ReactIcon,
     name: 'React',
