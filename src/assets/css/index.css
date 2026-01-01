@@ -129,7 +129,7 @@ code {
     }
   }
 
-  --animate-scroll: scroll 15s var(--animation-direction, forwards) linear
+  --animate-scroll: scroll 25s var(--animation-direction, forwards) linear
     infinite;
 
   @keyframes scroll {
@@ -189,6 +189,6 @@ code {
 
   button:not(:disabled),
   [role='button']:not(:disabled) {
-    cursor: pointer;
+    @apply cursor-pointer hover:scale-105 active:scale-95  duration-200;
   }
 }

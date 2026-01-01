@@ -48,7 +48,7 @@ function RenderApp({ children }: { children: React.ReactNode }) {
     <ThemeProvider>
       <div className="z-50  h-screen w-full flex gap-16  container mx-auto">
         <ThemeToggle />
-        <div className="w-64 bg-green-300"></div>
+        {/* <div className="w-64"></div> */}
         <div className="grow flex relative justify-center items-center">
           {children}
         </div>
