@@ -13,6 +13,7 @@ import appCss from '../assets/css/index.css?url'
 import type { QueryClient } from '@tanstack/react-query'
 import { ThemeProvider } from '@/providers/theme.provider'
 import { ThemeToggle } from '@/components/ui/ThemeToggle'
+import TransitionState from '@/components/transition-state'
 
 interface MyRouterContext {
   queryClient: QueryClient
@@ -47,7 +48,11 @@ function RenderApp({ children }: { children: React.ReactNode }) {
   return (
     <ThemeProvider>
       <div className="z-50  h-screen w-full flex gap-16  container mx-auto">
-        <ThemeToggle />
+        <div className="absolute top-0 right-0 p-4 flex flex-col gap-2">
+          <ThemeToggle />
+          <TransitionState />
+        </div>
+
         {/* <div className="w-64"></div> */}
         <div className="grow flex relative justify-center items-center">
           {children}

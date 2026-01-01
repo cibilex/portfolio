@@ -19,7 +19,7 @@ const profileActionsVariants: Variants = {
 }
 function ProfileActions() {
   return (
-    <CardContainer className=" w-sm rotate-y-0">
+    <CardContainer transitionField="profileActions" className="w-sm">
       <BlurBg />
       <HoverBorder />
       <CardBackground showMeteors={false} />

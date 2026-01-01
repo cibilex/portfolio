@@ -5,6 +5,7 @@ import HoverBorder from '../hover-border'
 import { CardBackground, CardContainer, CardItem } from '../ui/3d-card'
 import { SocialLinks } from '../SocialLinks'
 import type { Variants } from 'motion/react'
+import { defaultTransitions, useTransitionState } from '@/store/use-transition'
 
 const avatarVariants: Variants = {
   initial: {
@@ -31,7 +32,7 @@ const avatarVariants: Variants = {
 
 function ProfileHeader() {
   return (
-    <CardContainer className="w-xl rotate-2 rotate-y-10 ">
+    <CardContainer transitionField="profileHeader" className="w-xl">
       <BlurBg />
       <HoverBorder />
       <CardBackground />

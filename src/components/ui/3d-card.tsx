@@ -5,9 +5,15 @@ import React, {
   useEffect,
   useRef,
   useState,
+  useTransition,
 } from 'react'
 import { Meteors } from './Meteors'
+import type { TransitionFields } from '@/store/use-transition'
 import { cn } from '@/lib/utils'
+import {
+  useTransitionActions,
+  useTransitionState,
+} from '@/store/use-transition'
 
 const MouseEnterContext = createContext<
   [boolean, React.Dispatch<React.SetStateAction<boolean>>] | undefined
@@ -17,21 +23,30 @@ export const CardContainer = ({
   children,
   className,
   containerClassName,
+  transitionField,
 }: {
   children?: React.ReactNode
   className?: string
   containerClassName?: string
+  transitionField: TransitionFields
 }) => {
+  const { setTransition } = useTransitionActions()
   const containerRef = useRef<HTMLDivElement>(null)
   const [isMouseEntered, setIsMouseEntered] = useState(false)
+  const { x, y } = useTransitionState(transitionField || 'profileHeader')
+
+  useEffect(() => {
+    if (!containerRef.current) return
+    containerRef.current.style.transform = `rotateY(${x}deg) rotateX(${-y}deg)`
+  }, [x, y])
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!containerRef.current) return
     const { left, top, width, height } =
       containerRef.current.getBoundingClientRect()
-    const x = (e.clientX - left - width / 2) / 25
-    const y = (e.clientY - top - height / 2) / 25
-    containerRef.current.style.transform = `rotateY(${x}deg) rotateX(${-y}deg)`
+    const xResult = (e.clientX - left - width / 2) / 25
+    const yResult = (e.clientY - top - height / 2) / 25
+    setTransition(transitionField, { x: xResult, y: yResult })
   }
 
   const handleMouseEnter = () => {
@@ -41,9 +56,9 @@ export const CardContainer = ({
   const handleMouseLeave = () => {
     if (!containerRef.current) return
     setIsMouseEntered(false)
-    containerRef.current.style.transform = className
-      ? className
-      : `rotateY(0deg) rotateX(0deg)`
+    // containerRef.current.style.transform = className
+    //   ? className
+    //   : `rotateY(0deg) rotateX(0deg)`
   }
 
   return (
@@ -73,7 +88,7 @@ export const CardContainer = ({
 
 export const CardBackground = ({
   className,
-  meteorsNumber = 10,
+  meteorsNumber = 15,
   showMeteors = true,
 }: {
   className?: string
