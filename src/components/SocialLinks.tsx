@@ -1,32 +1,5 @@
 import { motion } from 'framer-motion'
-import { Mail, X } from 'lucide-react'
-
-const socialLinks = [
-  {
-    icon: Mail,
-    href: 'https://github.com',
-    label: 'GitHub',
-    color: 'hover:text-foreground',
-  },
-  {
-    icon: Mail,
-    href: 'https://linkedin.com',
-    label: 'LinkedIn',
-    color: 'hover:text-primary',
-  },
-  {
-    icon: X,
-    href: 'https://twitter.com',
-    label: 'Twitter',
-    color: 'hover:text-primary',
-  },
-  {
-    icon: Mail,
-    href: 'mailto:hello@example.com',
-    label: 'Email',
-    color: 'hover:text-accent',
-  },
-]
+import { socialLinks } from '@/constants/social-links.contants'
 
 export const SocialLinks = () => {
   return (

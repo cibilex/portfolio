@@ -47,7 +47,7 @@ export const Route = createRootRouteWithContext<MyRouterContext>()({
 function RenderApp({ children }: { children: React.ReactNode }) {
   return (
     <ThemeProvider>
-      <div className="z-50  h-screen w-full flex gap-16  container mx-auto">
+      <div className=" z-10 h-screen  flex gap-16  container mx-auto">
         <div className="absolute top-0 right-0 p-4 flex flex-col gap-2">
           <ThemeToggle />
           <TransitionState />
@@ -68,7 +68,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
       <head>
         <HeadContent />
       </head>
-      <body className="h-screen flex flex-col">
+      <body>
         <RenderApp>{children}</RenderApp>
         <TanStackDevtools
           config={{
