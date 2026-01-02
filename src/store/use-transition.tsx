@@ -24,7 +24,7 @@ type TransitionStoreActions = {
 export const defaultTransitions: TransitionStoreState = {
   profileHeader: { x: 15, y: -5 },
   profileStack: { x: 0, y: 0 },
-  profileContributions: { x: -2, y: -10 },
+  profileContributions: { x: -5, y: -15 },
   profileActions: { x: 0, y: 0 },
   modified: false,
 } as const

@@ -112,7 +112,7 @@ function RenderApp({ children }: { children: React.ReactNode }) {
         </div>
 
         {/* <div className="w-64"></div> */}
-        <div className="grow flex relative justify-center items-center">
+        <div className="grow flex relative z-10 justify-center">
           {children}
         </div>
       </div>

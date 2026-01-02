@@ -5,7 +5,7 @@ import ProfileActions from './profile-actions'
 
 function Profile() {
   return (
-    <div className="flex flex-col gap-20 pt-12">
+    <div className="flex flex-col justify-between gap-7  h-full mx-auto  py-6">
       <ProfileHeader />
       <ProfileStack />
       <ProfileContributions />
