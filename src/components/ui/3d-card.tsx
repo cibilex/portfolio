@@ -88,7 +88,7 @@ export const CardContainer = ({
 
 export const CardBackground = ({
   className,
-  meteorsNumber = 15,
+  meteorsNumber = 4,
   showMeteors = true,
 }: {
   className?: string
