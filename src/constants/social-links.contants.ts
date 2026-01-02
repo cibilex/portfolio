@@ -1,35 +1,33 @@
-import { Mail, X } from 'lucide-react'
+import { Mail } from 'lucide-react'
 import type { ComponentType } from 'react'
+import GithubIcon from '@/components/icons/github'
+import LinkedinIcon from '@/components/icons/linkedin'
+import MediumIcon from '@/components/icons/medium'
 
 export type SocialLink = {
-  icon: ComponentType<{ className?: string }>
+  icon: ComponentType<{ className?: string; color?: string }>
   href: string
   label: string
-  color: string
 }
 export const socialLinks: Array<SocialLink> = [
   {
-    icon: Mail,
-    href: 'https://github.com',
+    icon: GithubIcon,
+    href: 'https://github.com/cibilex',
     label: 'GitHub',
-    color: 'hover:text-foreground',
   },
   {
-    icon: Mail,
-    href: 'https://linkedin.com',
+    icon: LinkedinIcon,
+    href: 'https://linkedin.com/in/cibilex',
     label: 'LinkedIn',
-    color: 'hover:text-primary',
-  },
-  {
-    icon: X,
-    href: 'https://twitter.com',
-    label: 'Twitter',
-    color: 'hover:text-primary',
   },
   {
     icon: Mail,
-    href: 'mailto:hello@example.com',
+    href: 'mailto:mehmetilhan1799@icloud.com',
     label: 'Email',
-    color: 'hover:text-accent',
+  },
+  {
+    icon: MediumIcon,
+    href: 'https://medium.com/@cibilex',
+    label: 'Medium',
   },
 ]

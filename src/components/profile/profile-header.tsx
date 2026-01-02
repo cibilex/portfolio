@@ -3,7 +3,7 @@ import { MapPin } from 'lucide-react'
 import BlurBg from '../blur-bg'
 import HoverBorder from '../hover-border'
 import { CardBackground, CardContainer, CardItem } from '../ui/3d-card'
-import { SocialLinks } from '../SocialLinks'
+import ProfileSocialLinks from './profile-social-links'
 import type { Variants } from 'motion/react'
 
 const avatarVariants: Variants = {
@@ -95,12 +95,14 @@ function ProfileHeader() {
           transition={{ delay: 0.45 }}
           className="text-sm leading-relaxed text-muted-foreground"
         >
-          Delivering <strong >high-performance web applications</strong> with modern technologies, focusing on clean architecture, code quality, and long-term maintainability.
+          Delivering <strong>high-performance web applications</strong> with
+          modern technologies, focusing on clean architecture, code quality, and
+          long-term maintainability.
         </motion.p>
       </CardItem>
 
       <CardItem translateZ={45} className="w-full">
-        <SocialLinks />
+        <ProfileSocialLinks />
       </CardItem>
     </CardContainer>
   )
