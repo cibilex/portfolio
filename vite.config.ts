@@ -5,6 +5,7 @@ import viteReact from '@vitejs/plugin-react'
 import viteTsConfigPaths from 'vite-tsconfig-paths'
 import tailwindcss from '@tailwindcss/vite'
 import { nitro } from 'nitro/vite'
+import netlify from '@netlify/vite-plugin-tanstack-start' // ← add this
 
 const config = defineConfig({
   plugins: [
@@ -20,6 +21,7 @@ const config = defineConfig({
         routeToken: '$route',
       },
     }),
+    netlify(),
     viteReact({
       babel: {
         plugins: ['babel-plugin-react-compiler'],
