@@ -30,10 +30,68 @@ export const Route = createRootRouteWithContext<MyRouterContext>()({
         content: 'width=device-width, initial-scale=1',
       },
       {
-        title: 'TanStack Start Starter',
+        title: 'Mehmet ILHAN - Full Stack Developer Portfolio',
+      },
+      {
+        name: 'description',
+        content:
+          'Mehmet ILHAN is a Full Stack Developer from Turkey, passionate about building modern web experiences with cutting-edge technologies like React, TypeScript, and Node.js.',
+      },
+      {
+        name: 'keywords',
+        content:
+          'Mehmet ILHAN, mehmet frontend, mehmet full-stack, mehmet backend developer, portfolio, react portfolio, tanstack portfolio, tailwind portfolio, full stack developer, frontend developer, backend developer, nodejs developer, react developer, turkey developer',
+      },
+      {
+        name: 'author',
+        content: 'Mehmet ILHAN',
+      },
+      // Open Graph
+      {
+        property: 'og:title',
+        content: 'Mehmet ILHAN - Full Stack Developer Portfolio',
+      },
+      {
+        property: 'og:description',
+        content:
+          'Mehmet ILHAN is a Full Stack Developer from Turkey, delivering high-performance web applications with modern technologies, focusing on clean architecture, code quality, and long-term maintainability.',
+      },
+      {
+        property: 'og:type',
+        content: 'website',
+      },
+      {
+        property: 'og:url',
+        content: 'https://cibilex.fun',
+      },
+      {
+        property: 'og:image',
+        content: 'https://cibilex.fun/avatar.png',
+      },
+      // Twitter
+      {
+        name: 'twitter:card',
+        content: 'summary_large_image',
+      },
+      {
+        name: 'twitter:title',
+        content: 'Mehmet ILHAN - Full Stack Developer Portfolio',
+      },
+      {
+        name: 'twitter:description',
+        content:
+          'Mehmet ILHAN is a Full Stack Developer from Turkey, passionate about building modern web experiences.',
+      },
+      {
+        name: 'twitter:image',
+        content: 'https://cibilex.fun/avatar.png',
       },
     ],
     links: [
+      {
+        rel: 'canonical',
+        href: 'https://cibilex.fun',
+      },
       {
         rel: 'stylesheet',
         href: appCss,

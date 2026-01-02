@@ -5,7 +5,6 @@ import HoverBorder from '../hover-border'
 import { CardBackground, CardContainer, CardItem } from '../ui/3d-card'
 import { SocialLinks } from '../SocialLinks'
 import type { Variants } from 'motion/react'
-import { defaultTransitions, useTransitionState } from '@/store/use-transition'
 
 const avatarVariants: Variants = {
   initial: {
@@ -50,8 +49,8 @@ function ProfileHeader() {
               ></motion.div>
               <div className="h-full w-full rounded-full bg-card p-[2px]">
                 <img
-                  src="https://avatars.githubusercontent.com/u/55107569?v=4"
-                  alt="John Developer profile avatar"
+                  src="/avatar.png"
+                  alt="Mehmet İLHAN profile avatar"
                   className="h-full w-full rounded-full object-cover"
                 />
               </div>
@@ -96,8 +95,7 @@ function ProfileHeader() {
           transition={{ delay: 0.45 }}
           className="text-sm leading-relaxed text-muted-foreground"
         >
-          Building modern web experiences with cutting-edge technologies.
-          Passionate about clean code, performance, and developer experience.
+          Delivering <strong >high-performance web applications</strong> with modern technologies, focusing on clean architecture, code quality, and long-term maintainability.
         </motion.p>
       </CardItem>
 
