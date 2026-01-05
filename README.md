@@ -56,4 +56,4 @@ npm run build
 
 ---
 *Created by Mehmet İLHAN*
-* All rights reserved. Every. Single. One. :)**
+*All rights reserved. Every. Single. One. (Just joking 🙂)*
