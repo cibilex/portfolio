@@ -105,14 +105,14 @@ export const Route = createRootRouteWithContext<MyRouterContext>()({
 function RenderApp({ children }: { children: React.ReactNode }) {
   return (
     <ThemeProvider>
-      <div className=" z-10 h-screen  flex gap-16  container mx-auto">
-        <div className="absolute top-0 right-0 p-4 flex flex-col gap-2">
+      <div className=" z-10 h-screen  flex flex-col md:flex-row   container mx-auto">
+        <div className="md:absolute md:top-0 md:right-0 p-2 md:p-4 flex justify-end  md:flex-col gap-2">
           <ThemeToggle />
           <TransitionState />
         </div>
 
         {/* <div className="w-64"></div> */}
-        <div className="grow flex relative z-10 justify-center">
+        <div className="grow flex relative z-10  justify-center">
           {children}
         </div>
       </div>

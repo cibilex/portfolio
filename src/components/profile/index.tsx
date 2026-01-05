@@ -5,11 +5,10 @@ import ProfileActions from './profile-actions'
 
 function Profile() {
   return (
-    <div className="flex flex-col justify-between gap-7  h-full mx-auto  py-6">
+    <div className="flex flex-col  justify-between w-full  pb-6 gap-4  md:gap-7 md:py-6 h-full mx-auto">
       <ProfileHeader />
       <ProfileStack />
       <ProfileContributions />
-
       <ProfileActions />
     </div>
   )

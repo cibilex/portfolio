@@ -24,6 +24,7 @@ export const TransitionState = () => {
       style={{
         pointerEvents: modified ? 'auto' : 'none',
       }}
+      className='order-first md:order-last'
     >
       <Button variant="ghost" size="icon" onClick={resetTransition.resetState}>
         <UndoDot />

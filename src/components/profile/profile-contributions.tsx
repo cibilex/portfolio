@@ -19,7 +19,7 @@ const profileContributionsVariants: Variants = {
 }
 function ProfileContributions() {
   return (
-    <CardContainer transitionField="profileContributions" className="w-xl ">
+    <CardContainer transitionField="profileContributions" className=" w-[90%] md:w-xl ">
       <BlurBg />
       <HoverBorder />
       <CardBackground showMeteors={false} />

@@ -177,6 +177,9 @@ code {
   --color-grid: color-mix(in oklch, var(--grid-color) 10%, transparent);
   --color-success: oklch(var(--success));
   --color-success-foreground: oklch(var(--success-foreground));
+
+  --spacing-sm: 24rem;
+  --spacing-xl: 36rem;
 }
 
 @layer base {
