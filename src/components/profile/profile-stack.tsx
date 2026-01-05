@@ -26,7 +26,7 @@ const techStackVariants: Variants = {
 
 function ProfileStack() {
   return (
-    <CardContainer transitionField="profileStack" className="w-xl">
+    <CardContainer transitionField="profileStack" className=" w-[90%] md:w-xl">
       <BlurBg />
       <HoverBorder />
       <CardBackground showMeteors={false} />

@@ -25,7 +25,7 @@ export const HeroSection = () => {
   return (
     <GridBackground>
       {/* Main Content */}
-      <motion.div variants={cardVariants} initial="initial" animate="animate">
+      <motion.div className='w-full h-full' variants={cardVariants} initial="initial" animate="animate">
         <Profile />
       </motion.div>
     </GridBackground>

@@ -5,7 +5,6 @@ import React, {
   useEffect,
   useRef,
   useState,
-  useTransition,
 } from 'react'
 import { Meteors } from './Meteors'
 import type { TransitionFields } from '@/store/use-transition'
@@ -64,7 +63,7 @@ export const CardContainer = ({
   return (
     <MouseEnterContext.Provider value={[isMouseEntered, setIsMouseEntered]}>
       <div
-        className={cn('flex items-center justify-center', containerClassName)}
+        className={cn('flex items-center justify-center w-full', containerClassName)}
         style={{
           perspective: '1000px',
         }}
@@ -75,7 +74,7 @@ export const CardContainer = ({
           onMouseMove={handleMouseMove}
           onMouseLeave={handleMouseLeave}
           className={cn(
-            'flex flex-col  p-6  rounded-xl    group z-50 justify-center relative transition-all duration-200 ease-linear transform-3d **:transform-3d',
+            'flex flex-col  p-4 md:p-6  rounded-xl    group z-50 justify-center relative transition-all duration-200 ease-linear transform-3d **:transform-3d',
             className,
           )}
         >
