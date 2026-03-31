@@ -1,3 +1,8 @@
+/**
+ * Renders a 32×32 decorative AI-themed SVG icon.
+ *
+ * @returns An SVG element containing intersecting diagonal strokes and five colored circles (four purple outer dots and a lighter central dot) with `aria-hidden` set.
+ */
 function AiIcon() {
   return (
     <svg
