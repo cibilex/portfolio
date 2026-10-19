@@ -1,4 +1,4 @@
-import { FileText, Sparkles } from 'lucide-react'
+import { Send, Sparkles } from 'lucide-react'
 import type React from 'react'
 
 export const projects: Array<{
@@ -19,11 +19,12 @@ export const projects: Array<{
     tags: ['React', 'TanStack Start', 'Tailwind', 'Motion'],
   },
   {
-    icon: FileText,
+    icon: Send,
     name: 'XForm',
-    description: 'XForm, live at xform.cibilex.fun.',
+    description:
+      'A Telegram bot to create and answer forms, with a web dashboard to view your forms.',
     url: 'https://xform.cibilex.fun',
-    color: '#06b6d4',
-    tags: [],
+    color: '#229ed9',
+    tags: ['Telegram Bot', 'Vue', 'Vite'],
   },
 ]
