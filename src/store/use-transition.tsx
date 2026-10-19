@@ -8,7 +8,7 @@ type TransitionType = {
 export type TransitionFields =
   | 'profileHeader'
   | 'profileStack'
-  | 'profileContributions'
+  | 'profileProjects'
   | 'profileActions'
 type TransitionStoreState = Record<TransitionFields, TransitionType> & {
   modified: boolean
@@ -24,7 +24,7 @@ type TransitionStoreActions = {
 export const defaultTransitions: TransitionStoreState = {
   profileHeader: { x: 15, y: -5 },
   profileStack: { x: 0, y: 0 },
-  profileContributions: { x: -5, y: -15 },
+  profileProjects: { x: -5, y: -15 },
   profileActions: { x: 0, y: 0 },
   modified: false,
 } as const
